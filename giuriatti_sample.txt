@@ -35,11 +35,11 @@ testo=`echo $testo`
 # is used to find the rotors initial position:
 #
 
-./enigma_simula --refl C --rotors IV-II-V --rings GEO --plug "JO LA BR ET" --pos FTF PAT
+./enigma_emulator --refl C --rotors IV-II-V --rings GEO --plug "JO LA BR ET" --pos FTF PAT
 
 #
 # so that now the decoding can be obtained with
 #
 
-./enigma_simula --refl C --rotors IV-II-V --rings GEO --plug "JO LA BR ET" --pos MCG $testo
+./enigma_emulator --refl C --rotors IV-II-V --rings GEO --plug "JO LA BR ET" --pos MCG $testo
 

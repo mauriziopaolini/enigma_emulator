@@ -5,7 +5,7 @@
 #include <ctype.h>
 
 #define MAXTEXTLEN 10000
-#define VERSION "1.0"
+#define VERSION "1.1"
 
 // static char rotleft[] = "I";
 // static char rotmiddle[] = "II";
@@ -263,9 +263,8 @@ main (int argc, char *argv[])
     if (j == middlenotch) {
       if (! quiet) fprintf (stderr, "Double stepping [ijk] = [%d %d %d]\n", i, j, k);
       i = (i + 1) % 26;
-      j = (j + 1) % 26;
     }
-    if (k == rightnotch) {
+    if (k == rightnotch || j == middlenotch) {
       j = (j + 1) % 26;
     }
 
