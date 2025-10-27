@@ -15,6 +15,9 @@ YDUUO MOZBR RJATC IQHIE TAWBM JALZV WIIUP VZWSO EDUSN
 FGHJW CEFAB IJEOO RKSLV MDLEC UKQFT OYLQO CGKQ
 "
 
+echo -n "Input text:"
+echo "$testo"
+
 testo=`echo $testo`
 
 #echo "$testo"
