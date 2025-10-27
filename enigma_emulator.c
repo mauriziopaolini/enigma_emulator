@@ -302,7 +302,7 @@ main (int argc, char *argv[])
 
   if (printfinalpos || !quiet) printf ("\n");
   if (printfinalpos) {
-    printf ("Final rotor positions: %c %c %c\n", i + 'A', j + 'A', k + 'A');
+    printf ("Final rotors position: %c %c %c\n", i + 'A', j + 'A', k + 'A');
   }
   if (!quiet) printf ("Cleartext:\n");
   if (!quiet) printf ("====================\n");
