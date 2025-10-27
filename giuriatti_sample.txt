@@ -35,7 +35,15 @@ testo=`echo $testo`
 # is used to find the rotors initial position:
 #
 
-./enigma_emulator --refl C --rotors IV-II-V --rings GEO --plug "JO LA BR ET" --pos FTF PAT
+./enigma_emulator --refl C --rotors IV-II-V --rings GEO --plug "JO LA BR ET" --pos FTF -q PAT
+
+newpos=`./enigma_emulator --refl C --rotors IV-II-V --rings GEO --plug "JO LA BR ET" --pos FTF -q --nofp PAT`
+shouldbe="MCG"
+
+if [ "$newpos" !- "$shouldbe" ]
+then
+  echo "WARNING: Initial position should be \"$shouldbe\" instead of \"$newpos\""
+fi
 
 #
 # so that now the decoding can be obtained with
