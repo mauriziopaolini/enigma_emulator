@@ -1,6 +1,21 @@
 2025.10.27
 Double-step problem when middle and right rotors are both positioned at the
-respective "turnover" notch
+respective "turnover" notch.  In such case the middle rotor rotates of two
+positions instead of one.  For example:
+
+   $ ./enigma_emulator --rotors I-V-V --rings AAA --pos AZZ A
+   Option -r supersedes default values, left-middle-right rotors: I-V-V
+   Option -p supersedes default values, positions: A Z Z
+   Option -R supersedes default values, rings setting: A A A
+
+   input cypher text: A
+   Double stepping [ijk] = [0 25 25]
+
+   Final rotor positions: B B A
+   Cleartext:
+   ====================
+   M
+   ====================
 
 
 
