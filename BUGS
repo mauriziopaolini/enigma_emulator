@@ -1,0 +1,43 @@
+2025.10.27
+Double-step problem when middle and right rotors are both positioned at the
+respective "turnover" notch
+
+
+
+
+2025.09.xx
+./enigma_simula --rotors I-V-II --rings BAR --pos TAC $text --defect B:A
+Option -r supersedes default values, left-middle-right rotors: I-V-II
+Option -p supersedes default values, positions: T A C
+Option -R supersedes default values, rings setting: B A R
+
+input cypher text: DNEZQCIBCEGIUETVELKEMSLTDWMCTAUOWFXBCTGHIUNIQGIPYHGMGLUMWZFNFCZJYRUHTOCPLTYYA
+
+Final rotor positions: T D B
+Cleartext:
+====================
+?ASO? UZION ED?QU ESTAS FIDAE ILNOM EDELL ANIMA LECHE TROVI 
+INFON DOAQU ESTOT ESTOC ENTAU RO
+====================
+
+==============================================================================================
+==============================================================================================
+
+./enigma_simula --rotors I-V-II --rings BAR --pos TAC $text --defect B:Y
+Option -r supersedes default values, left-middle-right rotors: I-V-II
+Option -p supersedes default values, positions: T A C
+Option -R supersedes default values, rings setting: B A R
+
+input cypher text: DNEZQCIBCEGIUETVELKEMSLTDWMCTAUOWFXBCTGHIUNIQGIPYHGMGLUMWZFNFCZJYRUHTOCPLTYYA
+
+Final rotor positions: T D B
+Cleartext:
+====================
+LASOL UZION EDIQU ESTAS ?IDAE ILNOM EDELL ANIMA LECHE TROVI 
+INF?N DOAQU ESTO? ESTOC ENTAU RO
+====================
+
+==============================================================================================
+==============================================================================================
+
+reflector B exchanges A with Y, so that the two results should be the same!
